@@ -1,7 +1,7 @@
 <?php
 
 
-class TabloidReportPrinter extends LetterReportPrinter
+class TabloidReportPrinter implements ReportPrinter
 {
     public function printReport()
     {

@@ -1,7 +1,7 @@
 <?php
 
 
-class LetterReportPrinter
+class LetterReportPrinter implements ReportPrinter
 {
     public function printReport()
     {

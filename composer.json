@@ -1,0 +1,14 @@
+{
+    "name": "peterwilkins/src",
+    "authors": [
+        {
+            "name": "Peter Wilkins",
+            "email": "peter.wilkins@mayden.co.uk"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    }
+}
