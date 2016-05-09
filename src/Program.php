@@ -1,7 +1,7 @@
 <?php
-include 'Report.php';
+include '../vendor/autoload.php';
 
 $report = new TabloidReport();
-$report->printer();   // encapsulation is good!
+$report->printer();   
 
 echo "Program ended\n\n";

@@ -1,10 +1,7 @@
 <?php
 
 
-class ReportFormatter
+interface ReportFormatter
 {
-    public function formatReport()
-    {
-        echo "Formatting report for 8-1/2x11...\n\n";
-    }
+    public function formatReport();
 }

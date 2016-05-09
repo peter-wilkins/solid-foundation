@@ -1,16 +1,17 @@
 <?php
 
+include '../vendor/autoload.php';
 
-class TabloidReport implements Report
+class LetterReport implements Report
 {
-
     public function printer()
     {
         $dataAccess = new DataAccess;
         $dataAccess->getData();
-        $reportFormatter = new TabloidReportFormatter();
+        $reportFormatter = new LetterReportFormatter();
         $reportFormatter->formatReport();
-        $reportPrinter = new TabloidReportPrinter();
+        $reportPrinter = new LetterReportPrinter();
         $reportPrinter->printReport();
     }
 }
+

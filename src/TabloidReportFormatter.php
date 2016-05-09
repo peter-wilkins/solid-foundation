@@ -1,7 +1,7 @@
 <?php
 
 
-class TabloidReportFormatter extends ReportFormatter
+class TabloidReportFormatter implements ReportFormatter
 {
     public function formatReport()
     {
