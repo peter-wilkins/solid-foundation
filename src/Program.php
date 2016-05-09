@@ -1,7 +1,7 @@
 <?php
 include 'Report.php';
 
-$report = new Report();
+$report = new TabloidReport();
 $report->printer();   // encapsulation is good!
 
 echo "Program ended\n\n";
