@@ -2,10 +2,10 @@
 include '../vendor/autoload.php';
 
 
-$report = new TabloidReport(
+$report = new Report(
     new DataAccess(),
-    new TabloidReportFormatter(),
-    new TabloidReportPrinter());
+    new LetterReportFormatter(),
+    new LetterReportPrinter());
 $report->printer();   
 
 echo "Program ended\n\n";
