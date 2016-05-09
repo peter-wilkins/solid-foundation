@@ -3,14 +3,30 @@
 
 class TabloidReport implements Report
 {
+    private $dataAccess;
+    private $reportFormatter;
+    private $reportPrinter;
+
+    /**
+     * LetterReport constructor.
+     * @param $dataAccess
+     * @param $reportFormatter
+     * @param $reportPrinter
+     */
+    public function __construct(
+        IGetData $dataAccess,
+        TabloidReportFormatter $reportFormatter,
+        TabloidReportPrinter $reportPrinter)
+    {
+        $this->dataAccess = $dataAccess;
+        $this->reportFormatter = $reportFormatter;
+        $this->reportPrinter = $reportPrinter;
+    }
 
     public function printer()
     {
-        $dataAccess = new DataAccess;
-        $dataAccess->getData();
-        $reportFormatter = new TabloidReportFormatter();
-        $reportFormatter->formatReport();
-        $reportPrinter = new TabloidReportPrinter();
-        $reportPrinter->printReport();
+        $this->dataAccess->getData();
+        $this->reportFormatter->formatReport();
+        $this->reportPrinter->printReport();
     }
 }
